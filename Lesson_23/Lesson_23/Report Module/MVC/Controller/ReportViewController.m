@@ -46,6 +46,7 @@
     self.contentView.userInterfaceInput = self;
     
     [self.model needToReloadData];
+    self.contentView.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 #pragma mark - Table View DataSourse
@@ -65,6 +66,19 @@
     return cell;
     
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.model removeReportAtINdex:indexPath.row];
+    }
+}
+
 #pragma mark - Report View Input Protocol
 
 -(void) addReportButtonWasTapped
@@ -75,6 +89,11 @@
 
 
 -(void)dataDidReload
+{
+    [self.contentView.tableView reloadData];
+}
+
+-(void)reportDidRemove
 {
     [self.contentView.tableView reloadData];
 }

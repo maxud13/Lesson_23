@@ -43,6 +43,19 @@
     [self.modelOutput dataDidReload];
 }
 
+-(void)removeReportAtINdex:(NSInteger)index
+{
+    id report = [self.reportArray objectAtIndex:index];
+    
+    [[DataManaget storage]removeReport:report];
+    [[DataManaget storage]saveContext];
+    [self.reportArray removeObjectAtIndex:index];
+    
+    [self.modelOutput reportDidRemove];
+}
+
+
+
 #pragma mark - Private Method
 
 -(void)reloadData

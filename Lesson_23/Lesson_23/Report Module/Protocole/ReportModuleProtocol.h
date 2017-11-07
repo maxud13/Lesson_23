@@ -17,11 +17,15 @@
 -(void)createNewTestReport;
 -(void)needToReloadData;
 
+-(void)removeReportAtINdex:(NSInteger)index;
+
 @end
 
 @protocol ReportModelOutput <NSObject>
 
 -(void)dataDidReload;
+
+-(void)reportDidRemove;
 
 @end
 
