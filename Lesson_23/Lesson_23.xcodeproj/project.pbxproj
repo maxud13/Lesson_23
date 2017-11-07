@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4F63651FACDC2F00B0FEEB /* DataManaget+Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F63641FACDC2F00B0FEEB /* DataManaget+Storage.m */; };
 		6A5B28821FA8E62F004DBA32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B28811FA8E62F004DBA32 /* AppDelegate.m */; };
 		6A5B28851FA8E62F004DBA32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B28841FA8E62F004DBA32 /* ViewController.m */; };
 		6A5B28881FA8E62F004DBA32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5B28861FA8E62F004DBA32 /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A4F63631FACDC2F00B0FEEB /* DataManaget+Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataManaget+Storage.h"; sourceTree = "<group>"; };
+		6A4F63641FACDC2F00B0FEEB /* DataManaget+Storage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DataManaget+Storage.m"; sourceTree = "<group>"; };
 		6A5B287D1FA8E62F004DBA32 /* Lesson_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5B28801FA8E62F004DBA32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A5B28811FA8E62F004DBA32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A4F63621FACDBFB00B0FEEB /* DataManagerCategories */ = {
+			isa = PBXGroup;
+			children = (
+				6A4F63631FACDC2F00B0FEEB /* DataManaget+Storage.h */,
+				6A4F63641FACDC2F00B0FEEB /* DataManaget+Storage.m */,
+			);
+			name = DataManagerCategories;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		6A5B28741FA8E62F004DBA32 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 		6A5B28CA1FA8FF4B004DBA32 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				6A4F63621FACDBFB00B0FEEB /* DataManagerCategories */,
 				6A5B28CB1FA8FF6F004DBA32 /* Entiteis */,
 				6A5B28CE1FA9004E004DBA32 /* ReportsModel.xcdatamodeld */,
 				6A5B28E61FA905BA004DBA32 /* DataManaget.h */,
@@ -458,6 +472,7 @@
 				6A5B28E51FA904A1004DBA32 /* Nominatoin+CoreDataProperties.m in Sources */,
 				6A5B28E81FA905BA004DBA32 /* DataManaget.m in Sources */,
 				6A5B28C41FA8EB15004DBA32 /* ReportView.m in Sources */,
+				6A4F63651FACDC2F00B0FEEB /* DataManaget+Storage.m in Sources */,
 				6A5B28901FA8E62F004DBA32 /* main.m in Sources */,
 				6A5B28821FA8E62F004DBA32 /* AppDelegate.m in Sources */,
 				6A5B28C71FA8EB50004DBA32 /* ReportModel.m in Sources */,

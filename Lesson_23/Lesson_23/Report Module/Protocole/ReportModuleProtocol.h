@@ -8,15 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+
 @protocol ReportModelInput <NSObject>
+
+-(NSInteger)reportCount;
+-(id)reportAtIndex:(NSInteger)index;
+
+-(void)createNewTestReport;
+-(void)needToReloadData;
 
 @end
 
 @protocol ReportModelOutput <NSObject>
 
+-(void)dataDidReload;
+
 @end
 
 @protocol ReportVeiwInput <NSObject>
+
+-(void)addReportButtonWasTapped;
 
 @end
 

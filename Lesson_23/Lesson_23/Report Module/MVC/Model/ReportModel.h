@@ -14,3 +14,4 @@
 @property (nonatomic ,weak) id <ReportModelOutput> modelOutput;
 
 @end
+

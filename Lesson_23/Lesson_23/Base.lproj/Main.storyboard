@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kM0-Nn-al4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kM0-Nn-al4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yue-ef-Mlh">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yue-ef-Mlh">
                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yue-ef-Mlh" id="qSk-Ck-u9H">
@@ -54,12 +54,31 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Wfk-H1-vZc"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-iR-43t">
+                                        <rect key="frame" x="250" y="478" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.34892139272873679" green="1" blue="0.32532034942234334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="9aB-9B-Zrv"/>
+                                            <constraint firstAttribute="height" constant="75" id="pha-gS-xdw"/>
+                                        </constraints>
+                                        <state key="normal" title="+"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="37.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addNewReportButtonAction:" destination="NtN-qQ-YVW" eventType="touchUpInside" id="JxR-A2-Rwi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eAh-iR-43t" secondAttribute="trailing" constant="50" id="3Bq-Kl-tic"/>
                                     <constraint firstAttribute="trailing" secondItem="g0N-WO-PeL" secondAttribute="trailing" id="6Mg-Gi-C9j"/>
                                     <constraint firstAttribute="bottom" secondItem="g0N-WO-PeL" secondAttribute="bottom" id="8BT-WN-dAp"/>
                                     <constraint firstItem="g0N-WO-PeL" firstAttribute="top" secondItem="NtN-qQ-YVW" secondAttribute="top" id="NEc-kP-0Jt"/>
+                                    <constraint firstAttribute="bottom" secondItem="eAh-iR-43t" secondAttribute="bottom" constant="50" id="Vft-iD-o2G"/>
                                     <constraint firstItem="g0N-WO-PeL" firstAttribute="leading" secondItem="NtN-qQ-YVW" secondAttribute="leading" id="u7s-Xm-pes"/>
                                 </constraints>
                                 <connections>
@@ -83,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215" y="133"/>
+            <point key="canvasLocation" x="213.59999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

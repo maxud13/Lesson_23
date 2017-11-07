@@ -10,6 +10,7 @@
 #import "ReportModel.h"
 #import "ReportView.h"
 #import "ReportModuleProtocol.h"
+#import "Report+CoreDataProperties.h"
 
 @interface ReportViewController () <ReportModelOutput, ReportVeiwInput,UITableViewDelegate,UITableViewDataSource>
 
@@ -24,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setup];
 }
 
 #pragma mark - Lazy Init
@@ -41,22 +43,41 @@
 -(void)setup
 {
     self.model.modelOutput = self;
-    self.contentView.userInterfaceInput = self; 
+    self.contentView.userInterfaceInput = self;
+    
+    [self.model needToReloadData];
 }
 
 #pragma mark - Table View DataSourse
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.model reportCount];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
+    Report *report = [self.model reportAtIndex:indexPath.row];
+    cell.textLabel.text = report.name;
+    
     return cell;
     
 }
+#pragma mark - Report View Input Protocol
+
+-(void) addReportButtonWasTapped
+{
+    [self.model createNewTestReport];
+}
+#pragma mark - Report Model Output Protocole
+
+
+-(void)dataDidReload
+{
+    [self.contentView.tableView reloadData];
+}
+
 
 @end

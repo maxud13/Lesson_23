@@ -15,8 +15,7 @@
 @interface DataManaget : NSObject
 
 + (id)storage;
-
-- (Report*)createReport;
-- (NSArray*)allReports;
+- (NSManagedObjectContext*)context;
+- (void)saveContext;
 
 @end
